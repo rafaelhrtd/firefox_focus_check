@@ -75,7 +75,7 @@ describe('focus_checker', function() {
     htmlServer = new HtmlServer({
       host: 'localhost',
       port: '7555',
-      dir: path.resolve(__dirname, '..'),
+      dir: path.resolve(__dirname),
     });
     htmlServer.start();
   }));
@@ -89,7 +89,7 @@ describe('focus_checker', function() {
     afterEach(syncify(async function() {
       await page.quit();
     }));
-    for (let i = 0; i < 1000; i++) {
+    for (let i = 0; i < 10000; i++) {
       it('should focus', syncify(async function() {
         await test(page, htmlServer);
       }), 60000);
