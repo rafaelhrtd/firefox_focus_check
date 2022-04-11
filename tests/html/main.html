@@ -1,0 +1,49 @@
+
+<html>
+  <head>
+    <script>
+      var w = window;
+      var d = w.document;
+      var l = function() {
+        var chatDiv = document.createElement('div');
+        chatDiv.id = 'moment-chat';
+
+        const HOST = 'http://frame_server:8090';
+        document.body.appendChild(chatDiv);
+        // create momentChatIframe
+        const momentChatIframe = document.createElement('iframe');
+        momentChatIframe.id = 'moment-chat-frame';
+        momentChatIframe.allow = 'autoplay';
+      
+        let src = HOST + '/externalchat.html';
+      
+        momentChatIframe.src = src;
+        momentChatIframe.style['border'] = '0';
+      
+        momentChatIframe.style['position'] = 'fixed';
+        momentChatIframe.style['border-radius'] = '8px';
+        momentChatIframe.style['bottom'] = '90px';
+        momentChatIframe.style['z-index'] = 1232323332;
+        momentChatIframe.style['min-height'] = '300px';
+        momentChatIframe.style['width'] = '200px';
+        momentChatIframe.style['height'] = '550px';
+        momentChatIframe.style['right'] = '20px';
+        momentChatIframe.style['display'] = 'block';
+        momentChatIframe.style['opacity'] = '0.5';
+        momentChatIframe.style['background-color'] = 'black';
+        
+      
+        chatDiv.appendChild(momentChatIframe);
+        chatDiv.className='moment-on';  
+      };
+      if (d.readyState === 'complete') {
+        l();
+      } else {
+        w.addEventListener('load', l);
+      }
+    </script>
+  </head>
+  <body style="height:100%;padding:0;margin:0;">
+    <div>thirdpartyclaim</div>
+  </body>
+</html>

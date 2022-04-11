@@ -1,0 +1,30 @@
+{
+  "name": "focus-checker",
+  "version": "1.0.0",
+  "description": "For reproducing focus issue in",
+  "scripts": {
+    "test": "babel-node tests/run-test.js"
+  },
+  "author": "Rafael Hurtado",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/runtime": "7.12.1",
+    "geckodriver": "2.0.0",
+    "jasmine_test_utils": "2.0.3",
+    "selenium-webdriver": "4.1.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "7.12.1",
+    "@babel/core": "7.12.3",
+    "@babel/node": "7.12.1",
+    "@babel/plugin-proposal-class-properties": "7.12.1",
+    "@babel/plugin-proposal-decorators": "7.12.1",
+    "@babel/plugin-proposal-object-rest-spread": "7.12.1",
+    "@babel/plugin-transform-arrow-functions": "7.12.1",
+    "@babel/plugin-transform-runtime": "7.12.1",
+    "@babel/preset-env": "7.12.1",
+    "@babel/preset-react": "7.12.1",
+    "@babel/preset-stage-2": "7.8.3",
+    "@babel/plugin-proposal-optional-catch-binding": "7.16.7"
+  }
+}
